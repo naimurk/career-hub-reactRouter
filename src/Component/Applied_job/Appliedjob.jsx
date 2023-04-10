@@ -6,7 +6,7 @@ const Appliedjob = () => {
     const data = useLoaderData()
     
     return (
-        <div>
+        <div className='flex flex-col gap-y-8'>
              {
                 data.map(singleD => <SignleAppliedCart
                 key={singleD.id}
