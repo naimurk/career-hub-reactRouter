@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
@@ -9,6 +9,9 @@ import {
 import Header from './Component/Header/Header';
 import Home from './Component/Home/Home';
 import FeatureDetails from './Component/feature/FeatureDetails';
+import Appliedjob from './Component/Applied_job/Appliedjob';
+import { loaderdata } from './utilities';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -20,8 +23,16 @@ const router = createBrowserRouter([
       },
      {
       path : "feature/:featureId",
-      element: <FeatureDetails></FeatureDetails>
+      element: <FeatureDetails></FeatureDetails>,
+      loader: ()=> fetch('feature.json')
+     },
+     {
+      path : 'applied_job',
+      element: <Appliedjob></Appliedjob>,
+      loader : loaderdata
+      
      }
+
     ]
 
   }

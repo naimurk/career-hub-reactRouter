@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SingleCategory from './SingleCategory';
 
 
 const Category = () => {
     const [category, setCategory] = useState([])
-    fetch("category.json")
+    useEffect(()=>{
+        fetch("category.json")
         .then(res => res.json())
         .then(data => setCategory(data))
+    },[])
     // console.log(category);
     return (
         <div className=''>
