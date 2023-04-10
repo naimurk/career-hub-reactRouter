@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDollarSign } from '@fortawesome/free-solid-svg-icons'
 
+
 const SignleAppliedCart = ({ singleD }) => {
     const { id, img, jobTitle, jobType, time, salary, location } = singleD
     const {featureDe} = useContext(Contex)
