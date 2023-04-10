@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "img" : "google.png",
+      "jobTitle": "Software Engineer",
+      "jobType": "Remote",
+      "time": "Full Time",
+      "location": "United States",
+      "salary": "$120,000 - $150,000"
+    },
+    {
+      "id": 2,
+      "img" : "intel.png",
+      "jobTitle": "Marketing Manager",
+      "jobType": "Onsite",
+      "time": "Full Time",
+      "location": "San Francisco, CA",
+      "salary": "$90,000 - $110,000"
+    },
+    {
+      "id": 3,
+      "img" : "netflix.png",
+      "jobTitle": "Product Designer",
+      "jobType": "Remote",
+      "time": "Half Time",
+      "location": "Canada",
+      "salary": "$60,000 - $75,000"
+    },
+    {
+      "id": 4,
+      "img" : "tesla.png",
+      "jobTitle": "Business Analyst",
+      "jobType": "Onsite",
+      "time": "Full Time",
+      "location": "New York, NY",
+      "salary": "$80,000 - $100,000"
+    },
+    {
+      "id": 5,
+      "img" : "paypal.png",
+      "jobTitle": "Sales Representative",
+      "jobType": "Onsite",
+      "time": "Full Time",
+      "location": "London, UK",
+      "salary": "£50,000 - £70,000"
+    },
+    {
+      "id": 6,
+      "img" : "apple.png",
+      "jobTitle": "Data Scientist",
+      "jobType": "Remote",
+      "time": "Full Time",
+      "location": "Australia",
+      "salary": "$100,000 - $130,000"
+    }
+  ]
+  

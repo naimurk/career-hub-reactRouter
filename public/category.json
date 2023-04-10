@@ -7,7 +7,7 @@
     {   "id" : 2 ,
         "img": "finance.png",
         "jobCategoryTitle": "Data Science",
-        "jobAvailable": 0
+        "jobAvailable": 100
     },
     {   "id" : 3 ,
         "img": "light.png",

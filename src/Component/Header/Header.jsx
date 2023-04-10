@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-
+export const Contex = createContext(0)
 const Header = () => {
+    const [id , setid]= useState(0)
+    const featureDe = (id) => {
+        setid(id)
+    }
+
+    const contexValue = {
+        id,featureDe
+    }
     return (
-        <div>
+        <Contex.Provider value={contexValue}>
+               <div>
             <div  className='flex py-8  justify-between items-center'>
             <div><h1 className='text-3xl font-bold'>ATS-job</h1></div>
             <ul className='flex gap-x-8 items-center'>
@@ -16,6 +25,7 @@ const Header = () => {
             </div>
             <Outlet></Outlet>
         </div>
+        </Contex.Provider>
     );
 };
 
