@@ -5,15 +5,21 @@ import SingleFeature from './SingleFeature';
 
 const Feature = () => {
         const [Feature, setfeature] = useState([])
+        const [filter , setfilter] = useState([])
+        const [isOpen, setIsOpen] = useState(false)
 
         useEffect(() => {
         fetch('/feature.json')
             .then(res => res.json())
-            .then(data => setfeature(data))
+            .then(data => {
+                setfeature(data)
+                setfilter(data.slice(0,3))
+            })
     }, [])
     
+  
     
-
+   console.log(Feature,filter);
 
     // console.log(Feature);
     // const sayem = useContext(Contex)
@@ -26,13 +32,16 @@ const Feature = () => {
             </div>
             <div className='grid grid-cols-2 justify-center gap-12'>
                 {
-                    Feature.map(sF => <SingleFeature
+                    isOpen ? Feature.map(sF => <SingleFeature
+                        key={sF.id}
+                        sF={sF}
+                    ></SingleFeature>)  : filter.map(sF => <SingleFeature
                         key={sF.id}
                         sF={sF}
                     ></SingleFeature>)
                 }
             </div>
-            <button className='px-12 py-5 text-white bg-black mx-auto' >see all</button>
+            <button onClick={()=>setIsOpen(!isOpen)} className='px-12 py-5 text-white bg-black mx-auto' >{isOpen? 'see less': "see all"}</button>
         </div>
     );
 };

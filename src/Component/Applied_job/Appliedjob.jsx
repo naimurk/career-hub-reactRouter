@@ -17,8 +17,7 @@ const Appliedjob = () => {
         
         const filter = main.filter(Sd => Sd.jobType == "Remote")
         setmain(filter)
-       
-    }
+ }
   
     
 
