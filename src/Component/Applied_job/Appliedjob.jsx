@@ -4,36 +4,39 @@ import SignleAppliedCart from './SignleAppliedCart';
 // import { sayem } from '../../utilities';
 
 const Appliedjob = () => {
-    const [main, setmain] =useState([])
-    const data = useLoaderData()
-    useEffect(()=>{
-     setmain(data)
+   const [main, setmain] = useState([])
+   const data = useLoaderData()
+   useEffect(() => {
+      setmain(data)
 
-    },[])
-    
-    
-    
-    const Remotefilter = () => {
-        
-        const filter = main.filter(Sd => Sd.jobType == "Remote")
-        setmain(filter)
- }
-  
-    
+   }, [])
 
-    return (
-       <dir>
-        <button onClick={()=>Remotefilter()} className='p-5 bg-black text-white'>hello</button>
+
+
+   const Remotefilter = () => {
+
+      const filter = main.filter(Sd => Sd.jobType == "Remote")
+      setmain(filter)
+   }
+
+
+
+   return (
+      <div className='py-12'>
+         <div className=' flex justify-end gap-x-5 mb-5'>
+            <button onClick={() => Remotefilter()} className='px-5 py-3 rounded-md text-white bg-purple-500'>Remote</button>
+            <button onClick={() => Remotefilter()} className='px-5 py-3 rounded-md text-white bg-purple-500'>Onsite</button>
+         </div>
          <div className='flex flex-col gap-y-8'>
-             {
-                main.map(singleD => <SignleAppliedCart
-                key={singleD.id}
-                singleD = {singleD}
-                ></SignleAppliedCart>)
-             }
-        </div>
-       </dir>
-    );
+            {
+               main.map(singleD => <SignleAppliedCart
+                  key={singleD.id}
+                  singleD={singleD}
+               ></SignleAppliedCart>)
+            }
+         </div>
+      </div>
+   );
 };
 
 export default Appliedjob;

@@ -20,7 +20,7 @@ const Category = () => {
                 <p className='mt-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
 
-            <div className='  flex justify-evenly gap-4'>
+            <div className='  lg:flex justify-evenly gap-4'>
                 {
                     category.map(singleC => <SingleCategory
                         key={singleC.id}
