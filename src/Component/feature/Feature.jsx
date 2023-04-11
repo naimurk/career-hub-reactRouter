@@ -4,22 +4,22 @@ import SingleFeature from './SingleFeature';
 
 
 const Feature = () => {
-        const [Feature, setfeature] = useState([])
-        const [filter , setfilter] = useState([])
-        const [isOpen, setIsOpen] = useState(false)
+    const [Feature, setfeature] = useState([])
+    const [filter, setfilter] = useState([])
+    const [isOpen, setIsOpen] = useState(false)
 
-        useEffect(() => {
+    useEffect(() => {
         fetch('/feature.json')
             .then(res => res.json())
             .then(data => {
                 setfeature(data)
-                setfilter(data.slice(0,3))
+                setfilter(data.slice(0, 4))
             })
     }, [])
-    
-  
-    
-   console.log(Feature,filter);
+
+
+
+    console.log(Feature, filter);
 
     // console.log(Feature);
     // const sayem = useContext(Contex)
@@ -35,13 +35,15 @@ const Feature = () => {
                     isOpen ? Feature.map(sF => <SingleFeature
                         key={sF.id}
                         sF={sF}
-                    ></SingleFeature>)  : filter.map(sF => <SingleFeature
+                    ></SingleFeature>) : filter.map(sF => <SingleFeature
                         key={sF.id}
                         sF={sF}
                     ></SingleFeature>)
                 }
             </div>
-            <button onClick={()=>setIsOpen(!isOpen)} className='px-12 py-5 text-white bg-black mx-auto' >{isOpen? 'see less': "see all"}</button>
+            <div className='flex flex-col justify-center mt-12'>
+                <button onClick={() => setIsOpen(!isOpen)} className='w-1/6 px-7 text-white py-4 rounded-lg mx-auto bg-purple-500' >{isOpen ? 'see less' : "see all"}</button>
+            </div>
         </div>
     );
 };
