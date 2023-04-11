@@ -13,11 +13,13 @@ import Appliedjob from './Component/Applied_job/Appliedjob';
 import { loaderdata } from './utilities';
 import Assignment from './Component/AssignmentChart/Assignment';
 import { featureLoader } from './featureLoader';
+import Error from './Component/error/Error';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Header></Header>,
+    errorElement: <Error></Error>,
     children : [
       {
         path: '/',
@@ -38,7 +40,7 @@ const router = createBrowserRouter([
      {
       path: 'statics',
       element: <Assignment></Assignment>,
-      loader : ()=> fetch('/public/assignment.json')
+      loader : ()=> fetch('/assignment.json')
      }
 
     ]
