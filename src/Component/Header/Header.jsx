@@ -41,7 +41,7 @@ const Header = () => {
                             <Link to="/"><li className='mb-1 p-2  hover:bg-purple-400 lg:p-0 lg:mb-0'>Home</li></Link>
                             <Link to="/statics"><li className='mb-1 p-2  hover:bg-purple-400 lg:p-0 lg:mb-0'>Statistics</li></Link>
                             <Link to="/applied_job" ><li className=' p-2  hover:bg-purple-400 lg:p-0 lg:mb-0'>Applied job</li></Link>
-                            <Link><li className=' p-2  hover:bg-purple-400 lg:p-0 lg:mb-0'>Blog</li></Link>
+                            <Link to = "/blog" ><li className=' p-2  hover:bg-purple-400 lg:p-0 lg:mb-0'>Blog</li></Link>
                         </ul>
                         <button className='btn px-5 hidden lg:block py-3 rounded-md text-white bg-purple-500'>Start Applying</button>
 

@@ -10,7 +10,7 @@ const Assignment = () => {
             <h1 className='text-4xl font-bold my-12 text-center'>Visualize my previous marks</h1>
             <div className='flex justify-center mt-5 items-center'>
                 <div>
-                         <AreaChart width={500} height={400} data={data} >
+                         <AreaChart width={500} height={400} data={data && data} >
                          <Area type="monotone" dataKey="marks" stroke="#8884d8" fill="#8884d8" />
                          <XAxis dataKey = "assignment"></XAxis>
                          <YAxis></YAxis>

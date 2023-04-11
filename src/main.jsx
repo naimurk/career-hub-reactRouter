@@ -14,6 +14,7 @@ import { loaderdata } from './utilities';
 import Assignment from './Component/AssignmentChart/Assignment';
 import { featureLoader } from './featureLoader';
 import Error from './Component/error/Error';
+import Blog from './Component/blog/Blog';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       path: 'statics',
       element: <Assignment></Assignment>,
       loader : ()=> fetch('/assignment.json')
+     },
+     {
+      path: "/blog",
+      element: <Blog></Blog>
      }
 
     ]
