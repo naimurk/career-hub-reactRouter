@@ -3,6 +3,7 @@ import { Contex } from '../Header/Header';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faDollarSign,faBriefcase,faPhone,faEnvelope,faLocation } from '@fortawesome/free-solid-svg-icons'
+import CommonBanner from '../CommonBanner/CommonBanner';
 
 
 
@@ -35,7 +36,9 @@ const FeatureDetails =  () => {
     
     
     return (
-        <div className='lg:flex pb-5 gap-x-11'>
+       <div>
+        <CommonBanner>Details Job</CommonBanner>
+         <div className='lg:flex pb-5 mt-5 gap-x-11'>
             <div className='lg:w-3/4'>
                 <p className='my-8'><span className='text-lg font-bold'>Job Description:</span>  {loader?.jobDescription}</p>
                 <p className='my-8'><span className='text-lg font-bold'>Job Responsibility:</span>  {loader?.jobResponsibilities}</p>
@@ -58,6 +61,7 @@ const FeatureDetails =  () => {
 
             </div>
         </div>
+       </div>
     );
 };
 

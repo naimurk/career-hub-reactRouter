@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import SignleAppliedCart from './SignleAppliedCart';
+import CommonBanner from '../CommonBanner/CommonBanner';
 // import { sayem } from '../../utilities';
 
 const Appliedjob = () => {
@@ -27,7 +28,9 @@ const Appliedjob = () => {
 
 
    return (
-      <div className='py-12'>
+     <div>
+      <CommonBanner>Applied Job</CommonBanner>
+       <div className='py-12'>
          <div className=' flex justify-end gap-x-5 mb-5'>
             <button onClick={() => Remotefilter()} className='px-5 py-3 rounded-md text-white bg-purple-500'>Remote</button>
             <button onClick={() => Onsitefilter()} className='px-5 py-3 rounded-md text-white bg-purple-500'>Onsite</button>
@@ -41,6 +44,7 @@ const Appliedjob = () => {
             }
          </div>
       </div>
+     </div>
    );
 };
 

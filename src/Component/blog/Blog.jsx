@@ -1,8 +1,13 @@
 import React from 'react';
+import CommonBanner from '../CommonBanner/CommonBanner';
 
 const Blog = () => {
     return (
-        <div className='lg:w-1/2 mx-auto mt-12'>
+
+        <div>
+            <CommonBanner>Blog</CommonBanner>
+            <div className='lg:w-1/2 mx-auto mt-12'>
+            
             <div className='bg-slate-300  p-7' >
                 <h1 className='text-xl font-bold'> 1. When should you use context API?</h1>
                 <p className='mt-2'>answer: Use Context API when you need to pass data/state down multiple levels of components.</p>
@@ -19,6 +24,7 @@ const Blog = () => {
                 <h1 className='text-xl font-bold'> 4. What is useMemo?</h1>
                 <p className='mt-2'>answer: useMemo is a hook that memoizes the result of a function so that it is only recomputed when its dependencies change.</p>
             </div>
+        </div>
         </div>
     );
 };
