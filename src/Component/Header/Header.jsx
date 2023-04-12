@@ -3,6 +3,7 @@ import { Link, NavLink, Outlet } from 'react-router-dom';
 import { addToDb } from '../../localStorage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import './Header.css'
 export const Contex = createContext(0)
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -36,12 +37,16 @@ const Header = () => {
                                 }
                             </span>
                         </div>
-                        <ul className={`md:flex gap-x-8 absolute duration-500 lg:p-3 md:static ${isOpen ? 'top-20 right-3 w-1/2 bg-stone-200 ' : '-top-40 right-3'}`}>
+                        <ul className={`md:flex gap-x-8 absolute duration-500 lg:p-3 md:static ${isOpen ? 'top-20 right-3 w-1/2 bg-stone-200 z-10' : '-top-40 right-3'}`}>
                             {/* <NavLink to ='/' activeClassName='text-purple-400 !important'   ><li className='mb-1 p-2  hover:bg-purple-400 lg:p-0 lg:mb-0' >Home</li></NavLink> */}
-                            <Link to="/"><li className='mb-1 p-2  hover:bg-purple-400 lg:p-0 lg:mb-0'>Home</li></Link>
+                            {/* <Link to="/"><li className='mb-1 p-2  hover:bg-purple-400 lg:p-0 lg:mb-0'>Home</li></Link>
                             <Link to="/statics"><li className='mb-1 p-2  hover:bg-purple-400 lg:p-0 lg:mb-0'>Statistics</li></Link>
                             <Link to="/applied_job" ><li className=' p-2  hover:bg-purple-400 lg:p-0 lg:mb-0'>Applied job</li></Link>
-                            <Link to = "/blog" ><li className=' p-2  hover:bg-purple-400 lg:p-0 lg:mb-0'>Blog</li></Link>
+                            <Link to = "/blog" ><li className=' p-2  hover:bg-purple-400 lg:p-0 lg:mb-0'>Blog</li></Link> */}
+                            <NavLink to={'/'} ><li className='mb-1 p-2  hover:bg-slate-200 rounded-lg lg:mb-0'>Home</li></NavLink>
+                            <NavLink to={'/statics'} ><li className='mb-1 p-2  hover:bg-slate-200 rounded-lg lg:mb-0'>Statistics</li></NavLink>
+                            <NavLink to={'/applied_job'} ><li className=' p-2  hover:bg-slate-200rounded-lg  lg:mb-0'>applied job</li></NavLink>
+                            <NavLink to={'/blog'} ><li className=' p-2 hover:bg-slate-200 rounded-lg lg:mb-0'>blog</li></NavLink>
                         </ul>
                         <button className='btn px-5 hidden lg:block py-3 rounded-md text-white bg-purple-500'>Start Applying</button>
 
